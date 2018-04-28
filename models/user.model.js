@@ -1,11 +1,11 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 let userSchema = new mongoose.Schema({
-    name: string,
-    email: string,
-    mobileNumber: number,
-    password: string,
-    transactions: [{type: mongoose.Types.ObjectId}]
+    name: String,
+    email: String,
+    mobileNumber: Number,
+    password: String,
+    transactions: [{type: mongoose.Schema.Types.ObjectId}]
 }, { timestamps: true });
 
 let User = mongoose.model('users', userSchema);

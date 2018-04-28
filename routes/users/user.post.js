@@ -1,5 +1,7 @@
+import { Users } from "../../models/user.model";
 module.exports = {
-    saveUser: function(req, res){
-        res.send("Save user");
+    saveUser: async function(req, res){
+        let newUser = await Users.create(req.body);
+        res.send(newUser);
     } 
 }
