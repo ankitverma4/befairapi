@@ -7,7 +7,7 @@ let transactionsSchema = new mongoose.Schema({
         { userId: String},
         { amount: Number}
     ],
-    type: String
+    split: String
 })
 
 let transaction = mongoose.model('transactions', transactionsSchema);
