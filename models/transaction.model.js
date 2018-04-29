@@ -4,8 +4,7 @@ let transactionsSchema = new mongoose.Schema({
     userId: String,
     amount: Number,
     participants:[
-        { userId: String},
-        { amount: Number}
+        { userId: mongoose.Schema.Types.ObjectId, amount: Number}
     ],
     split: String
 })
